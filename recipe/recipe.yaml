@@ -12,7 +12,7 @@ source:
   sha256: 2b2ffd05f93e4c2af831633f69d5d64780dccbec578b005cbae3516b7789789b
 
 build:
-  number: 0
+  number: 1
   # The platforms conda-forge ships a `julia` package for AND builds natively.
   #
   # osx-arm64 is absent for a structural reason, not a missing dependency:
