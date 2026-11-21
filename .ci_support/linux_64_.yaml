@@ -1,3 +1,5 @@
+DOCKER_PLATFORM:
+- linux/amd64
 arpack:
 - '3.9'
 c_compiler:
@@ -25,11 +27,11 @@ libssh2:
 libunwind:
 - '1.8'
 libutf8proc:
-- '2.11'
+- '2.12'
 mpfr:
 - '4'
 pcre2:
-- '10.47'
+- '10.49'
 suitesparse:
 - '7'
 target_platform:
