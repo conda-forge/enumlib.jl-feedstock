@@ -1,5 +1,5 @@
 context:
-  version: "0.4.2"
+  version: "0.5.0"
 
 package:
   name: enumlib.jl
@@ -9,7 +9,7 @@ package:
 # the application to be compiled in the recipe (staged-recipes#34550).
 source:
   url: https://github.com/glwhart/Enumlib.jl/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 323591bb984afbd417f6535c7710385fdb960f54f56de71c9d805f49dba08bcb
+  sha256: 0c97bb9ad9c82132a3a9ac6f100eba8eb0c399e206489e2c805a3ccd34e991c8
 
 build:
   number: 0
@@ -65,6 +65,10 @@ requirements:
       then: libunwind
     - if: osx
       then: libosxunwind
+    # conda-forge's julia 1.12.7 on macOS fails to load with libcxx 23 (missing
+    # std::__vector_base_common<true>::__throw_length_error). Drop once julia is rebuilt.
+    - if: osx
+      then: libcxx <23
     - arpack
     - suitesparse
     - pcre2
@@ -97,6 +101,8 @@ requirements:
       then: libunwind
     - if: osx
       then: libosxunwind
+    - if: osx
+      then: libcxx <23
     - arpack
     - suitesparse
     - pcre2
