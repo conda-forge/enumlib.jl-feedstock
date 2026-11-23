@@ -27,7 +27,7 @@ libssh2:
 libunwind:
 - '1.8'
 libutf8proc:
-- '2.12'
+- '2.11'
 mpfr:
 - '4'
 pcre2:
