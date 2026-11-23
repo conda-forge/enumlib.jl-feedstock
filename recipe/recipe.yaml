@@ -65,6 +65,10 @@ requirements:
       then: libunwind
     - if: osx
       then: libosxunwind
+    # conda-forge's julia 1.12.7 on macOS fails to load with libcxx 23 (missing
+    # std::__vector_base_common<true>::__throw_length_error). Drop once julia is rebuilt.
+    - if: osx
+      then: libcxx <23
     - arpack
     - suitesparse
     - pcre2
@@ -97,6 +101,8 @@ requirements:
       then: libunwind
     - if: osx
       then: libosxunwind
+    - if: osx
+      then: libcxx <23
     - arpack
     - suitesparse
     - pcre2
