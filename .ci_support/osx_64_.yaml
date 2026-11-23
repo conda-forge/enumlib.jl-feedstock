@@ -5,7 +5,7 @@ arpack:
 c_compiler:
 - clang
 c_compiler_version:
-- '21'
+- '22'
 c_stdlib:
 - macosx_deployment_target
 c_stdlib_version:
@@ -27,7 +27,7 @@ macos_machine:
 mpfr:
 - '4'
 pcre2:
-- '10.47'
+- '10.49'
 suitesparse:
 - '7'
 target_platform:

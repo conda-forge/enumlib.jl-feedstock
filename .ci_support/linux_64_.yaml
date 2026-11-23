@@ -31,7 +31,7 @@ libutf8proc:
 mpfr:
 - '4'
 pcre2:
-- '10.47'
+- '10.49'
 suitesparse:
 - '7'
 target_platform:
