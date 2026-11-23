@@ -1,0 +1,3 @@
+# conda-forge's julia 1.12.7 requires libutf8proc <2.12; drop this once julia is rebuilt against 2.12.
+libutf8proc:
+  - '2.11'
